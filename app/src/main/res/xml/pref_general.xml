@@ -1,0 +1,28 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+        android:key="@string/pref_default_feed"
+        android:summary="Choose the Default feed to load"
+        android:title="Default Feed"
+        android:entries="@array/pref_feed_entries"
+        android:entryValues="@array/pref_feed_entry_values"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/pref_show_pub_date"
+        android:title="Show Published Date"
+        android:summary="Show published date"/>
+
+    <EditTextPreference
+        android:inputType="number"
+        android:key="@string/pref_number_of_items"
+        android:title="RSS Items"
+        android:summary="Choose the number of items to display in the list view"/>
+
+    <SwitchPreference
+        android:key="@string/pref_webview_or_parse_html"
+        android:title="Use webview to display article"
+        android:defaultValue="true"
+        android:summary="Use a webview to display the RSS item description instead of parsing the HTML"/>
+</PreferenceScreen>
